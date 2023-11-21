@@ -6,11 +6,11 @@ const mastodon = require('masto');
 function postToMastodon() {
   if (!process.env.MASTODON_URL) {
     if (process.env.CI) {
-      console.error('Missing MASTODON_URL in GitHub Actions secret');
+      console.error('Missing MASTODON_URL in GitHub Actions variable');
     } else {
       console.error('Missing MASTODON_URL in .env file');
     }
-    return;
+    throw new Error('Missing MASTODON_URL');
   }
 
   if (!process.env.MASTODON_ACCESS_TOKEN) {
@@ -19,7 +19,7 @@ function postToMastodon() {
     } else {
       console.error('Missing MASTODON_ACCESS_TOKEN in .env file');
     }
-    return;
+    throw new Error('Missing MASTODON_ACCESS_TOKEN');
   }
 
   const masto = mastodon.createRestAPIClient({
