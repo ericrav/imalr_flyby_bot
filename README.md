@@ -67,3 +67,10 @@ Next, click the Secrets tab and click "New repository secret". Enter the `MASTOD
 (Unlike the variables, secrets are hidden from the logs of your GitHub Actions.)
 
 GitHub Actions are defined in the  `.github/workflows` folder. This repo has a `mastodon.yml` workflow that runs the 2 node scripts from above.
+
+### Scheduled triggers
+
+There are other ways to trigger a GitHub Actions besides pushing code. View the full list here: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
+For example, you can schedule a job to run on a recurring schedule using a special syntax called [cron](https://en.wikipedia.org/wiki/Cron).
+This tool helps you generate the cron syntax: https://crontab.guru/
