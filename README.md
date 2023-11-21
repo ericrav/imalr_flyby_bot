@@ -25,3 +25,20 @@ To export the image, run:
 ```
 node sketches/export.js
 ```
+
+### Post images to Mastodon
+
+Mastodon is an open-source, decentralized social network like Twitter that allows automated accounts (bots) to post.
+
+To create your own Mastodon bot, create an account on a Mastodon instance like https://botsin.space/ (DM me for an invite code).
+
+Once you have an account, go to Settings > Development (https://botsin.space/settings/applications) and create a new developer application.
+Then, copy the access token it generates for you.
+
+Create a `.env` file in the root of this repo with the following contents (& paste in your access token):
+
+```
+MASTODON_URL=https://botsin.space
+MASTODON_ACCESS_TOKEN=
+```
+
