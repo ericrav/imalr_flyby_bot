@@ -48,3 +48,22 @@ node mastodon.js
 ```
 
 Then checkout the link to your post!
+
+## GitHub Actions
+
+Once you've pushed your repo to GitHub, you can setup a GitHub Action to run every time you push your code.
+
+Before your GitHub action will work, we need to add the environment variables that are hidden in the repo.
+Navigate to your repo's settings, then click "Secrets and variables" > Actions.
+
+Then, click the Variables tab and click "New repository secret". Enter the `MASTODON_URL` value from your .env file.
+
+![Screenshot of creating a variable](docs/github_variable.png)
+
+Next, click the Secrets tab and click "New repository secret". Enter the `MASTODON_ACCESS_TOKEN` value from your .env file.
+
+![Screenshot of creating a secret](docs/github_secret.png)
+
+(Unlike the variables, secrets are hidden from the logs of your GitHub Actions.)
+
+GitHub Actions are defined in the  `.github/workflows` folder. This repo has a `mastodon.yml` workflow that runs the 2 node scripts from above.
