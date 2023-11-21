@@ -1,3 +1,4 @@
+/// <reference path="../node_modules/@types/p5/global.d.ts" />
 const canvasSketch = require('canvas-sketch');
 const p5 = require("p5");
 new p5();
