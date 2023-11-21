@@ -17,12 +17,12 @@ const sketch = () => {
   translate(width / 2, height / 2);
 
   for (let i = 0; i < 800; i++) {
-    stroke(color(s, s, s, (5 + Math.random() * 5) | 0));
+    stroke(color(0, 0, s, (5 + Math.random() * 5) | 0));
     strokeWeight(1 + Math.random() * 5);
     rect(-25, -25, 50, 50);
     scale(1.003125 + Math.random() * 0.003125);
     rotate(0.025 + Math.random() * 0.025);
-    s = Math.max(0, Math.min(255, (s - (Math.random() * 3 - 1)) | 0));
+    s = Math.max(0, Math.min(255, (s - (Math.random() * 2 - 0.75))));
   }
 };
 
