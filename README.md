@@ -42,3 +42,9 @@ MASTODON_URL=https://botsin.space
 MASTODON_ACCESS_TOKEN=
 ```
 
+After an image has been exported to `output.png`, run this command to post it to your Mastodon account:
+```
+node mastodon.js
+```
+
+Then checkout the link to your post!
